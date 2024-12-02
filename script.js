@@ -33,7 +33,9 @@ function checkAnswer(answer) {
     playSound('correct');
   } else {
     const correctAnswer = isPositive ? 'positivo' : 'negativo';
-    document.getElementById('result').innerText = `Incorrecto. ❌ La contestación correcta es ${correctAnswer}. El resultado es ${currentResult}.`;
+    const resultDescription = isPositive ? 'positivo' : 'negativo'; // Calcula si el resultado es positivo o negativo
+    document.getElementById('result').innerText = 
+      `Incorrecto. ❌ La contestación correcta es ${correctAnswer}. El resultado es ${currentResult}. Por lo tanto, el resultado es ${resultDescription}.`;
     playSound('incorrect');
   }
 }
